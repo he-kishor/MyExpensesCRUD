@@ -1,0 +1,25 @@
+
+.main-content {
+    position: static;
+    overflow-y: auto; /* Add scrollbar if needed */
+  }
+.main-content .sidebar.activee{
+    position: static;
+    top: 50px; /* Adjust based on the height of your nav bar */
+    left: 80px; /* Adjust based on the width of your sidebar */
+    right: 0;
+    bottom: 0;
+    overflow-y: auto; /* Add scrollbar if needed */
+
+}
+  
+  .main-content main {
+   
+    display: block;
+    unicode-bidi: isolate;
+    padding-left: 80px;
+    padding-top: 60px;
+    height: calc(100vh - 50px); 
+    overflow-y: auto;/* Subtract nav bar height from viewport height */
+  }
+  

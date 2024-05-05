@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="icon" href="{% static 'img/Designer.png' %}" type="image/icon type" />
+    <style>
+        /* CSS for circular favicon */
+        link[rel="icon"] {
+            border-radius: 50%;
+        }
+    </style>
+    {% block head_assets %}
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="{% static 'css/authentication/login.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="Compamnylogo">
+            <img src="{% static 'img/Designer.png' %}">
+            <span class="logoo">My Expenses</span>
+        </div>
+        <nav class="logonav">
+        <button class="btn_login_pop">Login</button>
+        </nav>
+        
+
+    </header>
+    <div class="leftside">
+       <div class="wrapper">
+
+        <div class="from-box-login">
+        
+        <h2>Login</h2>
+       
+        <form action="#">
+        <div class="formsection">
+           <div class="input-box">
+              <span class="icon"><i class='bx bxs-user'></i></span>
+               <input type="email/phonenumber" required>
+               <label>User Id</label>
+            </div> 
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock' ></i></span>
+             <input type="password" required>
+             <label>Password</label>
+         </div> 
+         <div class="remember-forgot">
+            <label><input type="checkbox">
+                Remember me</label>
+            <a href="#"> Forgot Password?</a>
+         </div>
+         <div class="loginbtn">
+
+         <button type="submit" class="btn" >Login</button>
+        </div>
+         <div class="googlebtn">
+         <button type="login" class="btn"><i class="fab fa-google fa-1x"></i> <span>Sign in with google</span></button>
+         </div>
+         <div class="Login_register">
+            <p>Don't have an account?
+                <a href="#" class="register-link">Sing up</a></p>
+         </div>
+        </div>
+
+
+        </form>
+    </div>
+   
+    <div class="from-box-register">
+        
+        <h2>Register</h2>
+       
+        <form action="#">
+        <div class="formsection">
+           
+           <div class="input-box">
+              <span class="icon"><i class='bx bxs-user'></i></span>
+               <input type="email/phonenumber" required>
+               <label>Email or Mobile Number</label>
+            </div> 
+          <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock' ></i></span>
+             <input type="password" required>
+             <label id="firstpassword">Password</label>
+         </div> 
+         <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock' ></i></span>
+             <input type="password" required>
+             <label id="secorndpassword">Re-Password</label>
+         </div> 
+         <div class="remember-forgot">
+            <label><input type="checkbox">
+               
+               <a href="#" >I agree to the terms and conditions
+            </a>
+         </div>
+         <div class="register">
+
+         <button type="submit" class="btnotp">Send OTP</button>
+        </div>
+         
+         
+        </div>
+
+
+        </form>
+    </div>
+    <div class="from-box-otp">
+        
+        <h2>OTP Login</h2>
+       
+        <form action="#">
+        <div class="formsection">
+           
+        <div class="otp-input">
+                <input type="text" maxlength="1" pattern="\d" title="Please enter a single digit OTP" required>
+                <input type="text" maxlength="1" pattern="\d" title="Please enter a single digit OTP" required>
+                <input type="text" maxlength="1" pattern="\d" title="Please enter a single digit OTP" required>
+                <input type="text" maxlength="1" pattern="\d" title="Please enter a single digit OTP" required>
+        </div>
+            
+         <div class="otpbutton">
+
+         <button type="submit" class="registerbtn">Register</button>
+        </div>
+         
+         
+        </div>
+
+
+        </form>
+    </div>
+       </div>
+    </div>
+    <div class="rightside">
+        <div class="imapart"> </div>
+    </div>
+    
+    
+
+   <script src="{% static 'js/login.js' %}"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
